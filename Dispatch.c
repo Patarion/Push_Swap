@@ -25,7 +25,7 @@ void	lst_tri_dispatch(t_lst *stack)
 		small_sort(stack);
 	else if (i >= 10 && i <= 200)
 		medium_sort(stack);
-	else if (i > 200 && i <= 500)
+	else if (i > 200 && i <= INT_MAX)
 		big_sort(stack);
 	return ;
 }

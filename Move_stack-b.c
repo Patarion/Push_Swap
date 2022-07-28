@@ -17,6 +17,8 @@ void	r_r_b(t_lst *lst)
 	t_pile	*der;
 	t_pile	*a_der;
 
+	if (lst->prem == lst->der)
+		return ;
 	der = lst->der;
 	a_der = der->prec;
 	a_der->suiv = NULL;
@@ -32,6 +34,8 @@ void	r_b(t_lst *lst)
 	t_pile	*prem;
 	t_pile	*deux;
 
+	if (lst->prem == lst->der)
+		return ;
 	prem = lst->prem;
 	deux = lst->prem->suiv;
 	prem->suiv = NULL;
